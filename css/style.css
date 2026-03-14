@@ -133,7 +133,7 @@ ul { list-style: none; }
 
 .moto-rider {
   position: absolute;
-  bottom: 24px;
+  top: 48px;
   left: 0;
   transform: translateX(-160px);
   font-size: 200px;
