@@ -893,11 +893,11 @@ ul { list-style: none; }
 
 /* FRONT */
 .about-phone-face--front {
-  background: linear-gradient(160deg, #e85c00 0%, #c44400 100%);
+  background: linear-gradient(160deg, #1a6fd4 0%, #0d4fa0 100%);
   transform: translateZ(10px);
   box-shadow:
-    0 0 60px rgba(232,92,0,.55),
-    0 30px 80px rgba(180,60,0,.4);
+    0 0 60px rgba(26,111,212,.55),
+    0 30px 80px rgba(13,79,160,.4);
 }
 
 .about-phone-face--front::after {
@@ -981,7 +981,7 @@ ul { list-style: none; }
 .about-phone-apple {
   font-size: 54px;
   color: #fff;
-  filter: drop-shadow(0 0 14px rgba(255,140,0,.6));
+  filter: drop-shadow(0 0 14px rgba(80,180,255,.7));
 }
 
 .about-phone-brand {
@@ -995,14 +995,14 @@ ul { list-style: none; }
 .about-phone-brand small {
   font-size: 14px;
   font-weight: 600;
-  color: #ff9940;
+  color: #80c8ff;
   display: block;
   margin-top: 4px;
 }
 
 /* BACK */
 .about-phone-face--back {
-  background: linear-gradient(150deg, #c44400 0%, #a33800 50%, #c44400 100%);
+  background: linear-gradient(150deg, #0d4fa0 0%, #0a3d7a 50%, #0d4fa0 100%);
   transform: rotateY(180deg) translateZ(10px);
   display: flex;
   align-items: center;
@@ -1031,9 +1031,9 @@ ul { list-style: none; }
   position: absolute;
   top: 22px; left: 20px;
   width: 90px; height: 90px;
-  background: linear-gradient(145deg, #a03600, #c04200);
+  background: linear-gradient(145deg, #0a3d7a, #0d4fa0);
   border-radius: 22px;
-  box-shadow: 0 4px 14px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,200,100,.12);
+  box-shadow: 0 4px 14px rgba(0,0,0,.5), inset 0 1px 0 rgba(100,180,255,.12);
   z-index: 2;
 }
 
@@ -1042,8 +1042,8 @@ ul { list-style: none; }
   width: 28px; height: 28px;
   border-radius: 50%;
   background: radial-gradient(circle at 38% 38%, #1c2a3a, #040408);
-  border: 2.5px solid #7a3000;
-  box-shadow: 0 0 0 1.5px rgba(255,180,80,.15), inset 0 0 8px rgba(0,0,0,.6);
+  border: 2.5px solid #0a3d7a;
+  box-shadow: 0 0 0 1.5px rgba(80,160,255,.15), inset 0 0 8px rgba(0,0,0,.6);
 }
 
 .about-phone-cam::after {
