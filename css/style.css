@@ -1938,7 +1938,122 @@ ul { list-style: none; }
   .repair-fast__inner {
     flex-direction: column;
     text-align: center;
+    gap: 32px;
   }
   .repair-fast__text p { max-width: 100%; }
   .timer-3d-wrap { order: -1; }
+}
+
+/* ============================================================
+   MOBILE FIXES (max-width: 640px)
+   ============================================================ */
+@media (max-width: 640px) {
+
+  /* --- HERO PLACEHOLDER --- */
+  .hero-placeholder { min-height: 85vh; }
+  .hero-placeholder__content { gap: 12px; padding: 0 16px; }
+  .hero-neon--brand  { font-size: clamp(16px, 4.5vw, 26px); letter-spacing: .12em; }
+  .hero-neon--main   { font-size: clamp(22px, 7vw, 40px); }
+  .hero-neon--sub    { font-size: clamp(15px, 4.5vw, 24px); }
+
+  /* --- HERO SWIPER --- */
+  .hero__slide { min-height: 420px; }
+  .hero__content { padding-block: 48px 60px; }
+  .hero__title { font-size: clamp(1.4rem, 7vw, 2rem); }
+  .hero__sub   { font-size: 13px; }
+  .btn--hero   { padding: 12px 22px; font-size: 13px; }
+
+  /* --- TRUST BAR --- */
+  .trust-bar__grid { grid-template-columns: 1fr 1fr; gap: 8px; padding: 16px; }
+  .trust-item { padding: 10px 8px; }
+  .trust-item__icon--gif img { width: 80px; height: 80px; }
+  .trust-item p { font-size: 11px; }
+
+  /* --- SECTION HEADINGS --- */
+  .section__title { font-size: clamp(1.4rem, 6vw, 2rem); }
+  .section__sub   { font-size: 13px; }
+  .section__tag   { font-size: 11px; }
+
+  /* --- SERVICES --- */
+  .services-layout { gap: 24px; }
+  .services-col--center { gap: 16px; }
+  .service-item { padding: 16px; }
+  .service-item h3 { font-size: 13px; }
+  .service-item p  { font-size: 12px; }
+
+  /* --- 3D PHONE (services section) --- */
+  .phone-3d-wrap { perspective: 800px; }
+  .phone-3d { width: 140px; height: 290px; }
+  .phone-face { border-radius: 34px; }
+  .phone-face--front { transform: translateZ(8px); }
+  .phone-face--back  { transform: rotateY(180deg) translateZ(8px); }
+  .phone-screen { inset: 4px; border-radius: 30px; }
+  .phone-dynamic-island { width: 66px; height: 20px; margin-top: 10px; }
+  .phone-screen__apple { font-size: 38px; }
+  .phone-screen__brand { font-size: 13px; }
+  .phone-screen__brand small { font-size: 9px; }
+  .phone-screen__city { font-size: 7px; }
+  .phone-camera-module { width: 64px; height: 64px; top: 14px; left: 12px; border-radius: 16px; }
+  .phone-cam { width: 20px; height: 20px; }
+  .phone-cam--1 { top: 8px; left: 8px; }
+  .phone-cam--2 { top: 8px; right: 8px; }
+  .phone-cam--3 { bottom: 8px; left: 8px; }
+  .phone-cam-flash { width: 10px; height: 10px; bottom: 10px; right: 10px; }
+
+  /* --- IPAD LAYOUT --- */
+  .ipad-layout { gap: 24px; }
+  .ipad-services { gap: 10px; }
+  .ipad-service { padding: 12px; }
+  .ipad-service span { font-size: 11px; }
+
+  /* --- REPAIR FAST / TIMER --- */
+  .repair-fast { padding: 48px 0; }
+  .repair-fast__inner { gap: 24px; }
+  .repair-fast__text h2 { font-size: clamp(1.3rem, 6vw, 1.8rem); }
+  .repair-fast__text p  { font-size: 13px; }
+  .timer-3d-wrap { flex: none; width: 100%; display: flex; justify-content: center; }
+  .timer-3d { width: 190px; height: 190px; }
+  .timer-face { border-radius: 50%; }
+  .timer-face--front { border-width: 5px; transform: translateZ(8px); }
+  .timer-face--back  { border-width: 5px; transform: rotateY(180deg) translateZ(8px); }
+  .timer-face__digits { font-size: 40px; }
+  .timer-face__label-top { font-size: 8px; }
+  .timer-face__unit { font-size: 8px; }
+  .timer-face__crown { right: -14px; width: 10px; height: 36px; }
+  .timer-ring-track,
+  .timer-ring-arc { stroke-width: 9; }
+
+  /* --- ABOUT --- */
+  .about-layout { gap: 24px; }
+  .about-layout__content p { font-size: 13px; }
+  .about-highlight { font-size: 14px; }
+  .about-phone-3d-wrap { perspective: 900px; }
+  .about-phone-3d { width: 160px; height: 330px; }
+  .about-phone-face { border-radius: 38px; }
+  .about-phone-face--front { transform: translateZ(8px); }
+  .about-phone-face--back  { transform: rotateY(180deg) translateZ(8px); }
+  .about-phone-screen { inset: 4px; border-radius: 34px; }
+  .about-phone-island { width: 70px; height: 20px; }
+  .about-phone-apple { font-size: 40px; }
+  .about-phone-brand { font-size: 16px; }
+
+  /* --- ABOUT GALLERY --- */
+  .about-gallery { grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 28px; }
+
+  /* --- TESTIMONIALS --- */
+  .testimonial-card { padding: 18px; }
+  .testimonial-card p { font-size: 13px; }
+  .testimonial-card__author { font-size: 13px; }
+
+  /* --- MAP --- */
+  .map-section__iframe { height: 280px; }
+  .map-section__head { font-size: 12px; }
+
+  /* --- FOOTER --- */
+  .footer__inner { gap: 10px; }
+  .footer__copy { font-size: 11px; text-align: center; }
+  .footer__address { font-size: 11px; text-align: center; justify-content: center; }
+
+  /* --- MOTO RIDER --- */
+  .moto-rider { font-size: 120px; }
 }
