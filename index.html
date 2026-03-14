@@ -27,9 +27,7 @@
     <div class="container header__inner">
 
       <a href="#" class="logo">
-        <div class="logo__icon-wrap">
-          <i class="fa-brands fa-apple"></i>
-        </div>
+        <img src="img/logo.png" alt="Daniel do iPhone" class="logo__img" />
         <div class="logo__text">
           Daniel do <strong>iPhone</strong>
         </div>
@@ -38,7 +36,7 @@
       <nav class="nav" id="nav">
         <a href="#home" class="nav__link">Home</a>
         <a href="#servicos" class="nav__link">Smartphones</a>
-        <a href="#ipad" class="nav__link">iPad</a>
+        <a href="#ipad" class="nav__link">iPhone</a>
         <a href="#sobre" class="nav__link">Quem Somos</a>
         <a href="#depoimentos" class="nav__link">Depoimentos</a>
       </nav>
@@ -60,15 +58,24 @@
     <div class="nav-mobile" id="nav-mobile">
       <a href="#home" class="nav__link">Home</a>
       <a href="#servicos" class="nav__link">Smartphones</a>
-      <a href="#ipad" class="nav__link">iPad</a>
+      <a href="#ipad" class="nav__link">iPhone</a>
       <a href="#sobre" class="nav__link">Quem Somos</a>
       <a href="#depoimentos" class="nav__link">Depoimentos</a>
       <a href="https://wa.me/5527000000000" target="_blank" class="btn btn--primary" style="margin-top: 8px;">Orçamento Grátis</a>
     </div>
   </header>
 
+  <!-- ===== HERO PLACEHOLDER ===== -->
+  <section class="hero-placeholder" id="home">
+    <div class="hero-placeholder__content">
+      <p class="hero-neon hero-neon--sub2" id="neon-brand"></p>
+      <h1 class="hero-neon hero-neon--main" id="neon-main"></h1>
+      <p class="hero-neon hero-neon--sub1" id="neon-sub"></p>
+    </div>
+  </section>
+
   <!-- ===== HERO SWIPER ===== -->
-  <section class="hero" id="home">
+  <section class="hero">
     <div class="swiper hero-swiper">
       <div class="swiper-wrapper">
 
@@ -91,7 +98,7 @@
         <div class="swiper-slide hero__slide hero__slide--2">
           <div class="hero__overlay"></div>
           <div class="container hero__content">
-            <h1 class="hero__title">Especialistas em<br /><span>iPhone e Xiaomi</span></h1>
+            <h1 class="hero__title">Garantia de<br /><span>1 ano</span></h1>
             <p class="hero__sub">
               Assistência técnica certificada com peças de qualidade.<br />
               Garantia em todos os serviços!
@@ -128,20 +135,20 @@
   <section class="trust-bar">
     <div class="container trust-bar__grid">
       <div class="trust-item">
-        <div class="trust-item__icon">
-          <i class="fa-solid fa-shield-halved"></i>
+        <div class="trust-item__icon trust-item__icon--gif">
+          <img src="img/check.gif" alt="Garantia" />
         </div>
         <p>Serviços com até 1 ano<br />de garantia.</p>
       </div>
       <div class="trust-item">
-        <div class="trust-item__icon">
-          <i class="fa-solid fa-lock"></i>
+        <div class="trust-item__icon trust-item__icon--gif">
+          <img src="img/locker.gif" alt="Dados protegidos" />
         </div>
         <p>Seus dados são protegidos<br />e não resetamos seu aparelho.</p>
       </div>
       <div class="trust-item">
-        <div class="trust-item__icon">
-          <i class="fa-solid fa-thumbs-up"></i>
+        <div class="trust-item__icon trust-item__icon--gif">
+          <img src="img/1like.gif" alt="Qualidade" />
         </div>
         <p>Qualidade das peças<br />e do atendimento.</p>
       </div>
@@ -159,7 +166,7 @@
     <div class="container">
       <div class="section__head">
         <span class="section__tag">Soluções Completas em</span>
-        <h2 class="section__title">Conserto de Celular<br />em Vila Velha</h2>
+        <h2 class="section__title">Conserto de Celular<br />em Vila Velha<br />com Garantia de 1 ano</h2>
         <p class="section__sub">
           Assistência Especializada Apple e grandes marcas. Soluções de Manutenção e Reparos em Smartphones, Tablets e Apple Watch.<br />
           Faça seu orçamento online em contato direto pelo Whatsapp. Técnicos credenciados e certificados.
@@ -187,8 +194,41 @@
         </div>
 
         <div class="services-col services-col--center">
-          <div class="services-center-img">
-            <img src="img/iphone-parts.jpg" alt="Peças iPhone" onerror="this.style.display='none'; this.parentElement.classList.add('img-placeholder')" />
+          <div class="phone-3d-wrap">
+            <div class="phone-3d" id="phone-3d">
+
+              <!-- FRONT FACE -->
+              <div class="phone-face phone-face--front">
+                <div class="phone-screen">
+                  <div class="phone-dynamic-island"></div>
+                  <div class="phone-status-bar">
+                    <span class="phone-status-time">9:41</span>
+                    <span class="phone-status-icons">
+                      <i class="fa-solid fa-signal"></i>
+                      <i class="fa-solid fa-wifi"></i>
+                      <i class="fa-solid fa-battery-full"></i>
+                    </span>
+                  </div>
+                  <div class="phone-screen-content">
+                    <i class="fa-brands fa-apple phone-screen__apple"></i>
+                    <div class="phone-screen__brand">Daniel<small>do iPhone</small></div>
+                    <div class="phone-screen__city">Vila Velha, ES</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- BACK FACE -->
+              <div class="phone-face phone-face--back">
+                <div class="phone-camera-module">
+                  <div class="phone-cam phone-cam--1"></div>
+                  <div class="phone-cam phone-cam--2"></div>
+                  <div class="phone-cam phone-cam--3"></div>
+                  <div class="phone-cam-flash"></div>
+                </div>
+                <i class="fa-brands fa-apple phone-back__logo"></i>
+              </div>
+
+            </div>
           </div>
           <a href="https://wa.me/5527000000000" target="_blank" class="btn btn--primary services-cta">
             Solicite Orçamento
@@ -217,31 +257,67 @@
     </div>
   </section>
 
-  <!-- ===== IPAD SECTION ===== -->
+  <!-- ===== FAST REPAIR ===== -->
+  <section class="repair-fast" id="rapido">
+    <div class="container repair-fast__inner">
+      <div class="repair-fast__text" data-reveal>
+        <span class="section__tag">Agilidade que você não encontra em outro lugar</span>
+        <h2 class="section__title">Reparo em apenas<br /><span class="repair-fast__highlight">20 minutos</span><br />se agendar!</h2>
+        <p>Sem filas, sem espera. Agende pelo WhatsApp e chegue com hora marcada. Seu iPhone pronto enquanto você toma um café.</p>
+        <a href="https://wa.me/5527000000000" target="_blank" class="btn btn--primary" style="margin-top: 24px;">
+          <i class="fa-brands fa-whatsapp"></i> Agendar Agora
+        </a>
+      </div>
+      <div class="timer-3d-wrap">
+        <div class="timer-3d" id="timer-3d">
+          <div class="timer-face timer-face--front">
+            <div class="timer-face__crown"></div>
+            <svg class="timer-face__ring" viewBox="0 0 200 200">
+              <circle cx="100" cy="100" r="84" class="timer-ring-track"/>
+              <circle cx="100" cy="100" r="84" class="timer-ring-arc"/>
+            </svg>
+            <div class="timer-face__display">
+              <span class="timer-face__label-top">REPARO EM</span>
+              <span class="timer-face__digits">20:00</span>
+              <span class="timer-face__unit">MINUTOS</span>
+            </div>
+          </div>
+          <div class="timer-face timer-face--back">
+            <div class="timer-back__sensor"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== IPHONE SECTION ===== -->
   <section class="section section--gray" id="ipad">
+    <div class="moto-rider" id="moto-rider">
+      <i class="fa-solid fa-motorcycle"></i>
+    </div>
     <div class="container ipad-layout">
-      <div class="ipad-layout__img">
-        <img src="img/ipad-repair.jpg" alt="Conserto de iPad" onerror="this.style.display='none'; this.parentElement.classList.add('img-placeholder')" />
+      <div class="ipad-layout__phone">
+        <!-- 3D model will be added here -->
       </div>
       <div class="ipad-layout__content">
-        <span class="section__tag">Soluções Completas em</span>
-        <h2 class="section__title">Conserto de iPad<br />em Vila Velha</h2>
+        <span class="section__tag">Comodidade para você</span>
+        <h2 class="section__title">Buscamos e Entregamos<br />seu aparelho</h2>
         <div class="ipad-services">
           <div class="ipad-service">
-            <div class="ipad-service__icon"><i class="fa-regular fa-tablet-screen-button"></i></div>
-            <span>Troca de Tela<br />do iPad</span>
+            <div class="ipad-service__icon"><i class="fa-brands fa-apple"></i></div>
+            <span>Troca de Tela<br />do iPhone</span>
           </div>
           <div class="ipad-service">
-            <div class="ipad-service__icon"><i class="fa-regular fa-tablet-screen-button"></i></div>
-            <span>Troca de Conector<br />de Carga do iPad</span>
+            <div class="ipad-service__icon"><i class="fa-brands fa-apple"></i></div>
+            <span>Troca de Conector<br />de Carga do iPhone</span>
           </div>
           <div class="ipad-service">
-            <div class="ipad-service__icon"><i class="fa-regular fa-tablet-screen-button"></i></div>
+            <div class="ipad-service__icon"><i class="fa-brands fa-apple"></i></div>
             <span>Troca de Vidro<br />ou Câmera</span>
           </div>
           <div class="ipad-service">
-            <div class="ipad-service__icon"><i class="fa-regular fa-tablet-screen-button"></i></div>
-            <span>Troca de Bateria<br />do iPad</span>
+            <div class="ipad-service__icon"><i class="fa-brands fa-apple"></i></div>
+            <span>Troca de Bateria<br />do iPhone</span>
           </div>
         </div>
         <a href="https://wa.me/5527000000000" target="_blank" class="btn btn--primary">
@@ -272,14 +348,60 @@
         </p>
         <p>
           Além de assistência técnica especializada, oferecemos produtos e acessórios para diversas marcas
-          de aparelhos <strong>celulares, ipads, ou apple watch</strong>.
+          de aparelhos <strong>celulares, iPhones, ou apple watch</strong>.
         </p>
         <p class="about-highlight">Você encontra tudo que precisa em um só lugar!</p>
         <a href="https://wa.me/5527000000000" target="_blank" class="btn btn--dark">Saiba Mais</a>
       </div>
-      <div class="about-layout__img">
-        <img src="img/loja.jpg" alt="Loja Daniel do iPhone" onerror="this.style.display='none'; this.parentElement.classList.add('img-placeholder')" />
+      <div class="about-layout__img about-phone-wrap">
+        <div class="about-phone-3d-wrap">
+          <div class="about-phone-3d" id="about-phone-3d">
+
+            <!-- FRONT -->
+            <div class="about-phone-face about-phone-face--front">
+              <div class="about-phone-screen">
+                <div class="about-phone-island"></div>
+                <div class="about-phone-status">
+                  <span>9:41</span>
+                  <span class="about-phone-status-icons">
+                    <i class="fa-solid fa-signal"></i>
+                    <i class="fa-solid fa-wifi"></i>
+                    <i class="fa-solid fa-battery-full"></i>
+                  </span>
+                </div>
+                <div class="about-phone-content">
+                  <i class="fa-brands fa-apple about-phone-apple"></i>
+                  <div class="about-phone-brand">iPhone</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- BACK -->
+            <div class="about-phone-face about-phone-face--back">
+              <div class="about-phone-cam-module">
+                <div class="about-phone-cam about-phone-cam--1"></div>
+                <div class="about-phone-cam about-phone-cam--2"></div>
+                <div class="about-phone-cam about-phone-cam--3"></div>
+                <div class="about-phone-cam-flash"></div>
+              </div>
+              <i class="fa-brands fa-apple about-phone-back-logo"></i>
+            </div>
+
+          </div>
+        </div>
       </div>
+    </div>
+
+    <!-- Gallery -->
+    <div class="about-gallery">
+      <div class="about-gallery__item"><img src="img/loja-135.png" alt="Loja 1" /></div>
+      <div class="about-gallery__item"><img src="img/loja-136.png" alt="Loja 2" /></div>
+      <div class="about-gallery__item"><img src="img/loja-137.png" alt="Loja 3" /></div>
+      <div class="about-gallery__item"><img src="img/loja-138.png" alt="Loja 4" /></div>
+      <div class="about-gallery__item"><img src="img/loja-139.png" alt="Loja 5" /></div>
+      <div class="about-gallery__item"><img src="img/loja-140.png" alt="Loja 6" /></div>
+      <div class="about-gallery__item"><img src="img/loja-141.png" alt="Loja 7" /></div>
+      <div class="about-gallery__item"><img src="img/loja-144.png" alt="Loja 8" /></div>
     </div>
   </section>
 
@@ -296,32 +418,32 @@
             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
           </div>
-          <p>Excelente atendimento. Local muito seguro, álcool em gel a disposição para os clientes. A recepção soube resolver meus problemas. Indico demais.</p>
-          <strong>Laiane Guerra</strong>
+          <p>Meu iPhone 13 caiu e a tela quebrou toda. Trouxe aqui e em poucas horas estava como novo. Atendimento rápido, preço honesto e o técnico ainda me deu dicas de como proteger melhor o aparelho. Super recomendo!</p>
+          <strong>Fernanda Oliveira</strong>
         </div>
         <div class="testimonial-card">
           <div class="testimonial-card__stars">
             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
           </div>
-          <p>Foi excelente, resolveram meu problema com eficiência e rapidez estou muito satisfeita obrigada pelo carinho e atenção de TDS!!</p>
-          <strong>Gisely Da Cunha Marques</strong>
+          <p>Bateria do meu iPhone 11 durava menos de metade do dia. Fiz a troca aqui e voltou a ser o de antes. Serviço feito no mesmo dia, com garantia e sem dor de cabeça. Voltarei sempre que precisar.</p>
+          <strong>Rafael Souza</strong>
         </div>
         <div class="testimonial-card">
           <div class="testimonial-card__stars">
             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
           </div>
-          <p>O aparelho ficou ótimo. Sem problemas até o momento. Troca da tela do A30s. Preço justo. Explicam detalhadamente o serviço a ser executado. Atendimento excelente da colaboradora Carolina. Ainda tem garantia de 6 meses enquanto em outras lojas que liguei eram apenas 3. Ganharam um cliente.</p>
-          <strong>Miguel Lisbôa</strong>
+          <p>Molhei meu iPhone e achei que tinha perdido tudo. O pessoal aqui foi transparente desde o início, explicou o que aconteceu e recuperou o aparelho completamente. Fiquei impressionado com o profissionalismo. Nota 10!</p>
+          <strong>Camila Rocha</strong>
         </div>
         <div class="testimonial-card">
           <div class="testimonial-card__stars">
             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
           </div>
-          <p>Essa semana tive o prazer de conhecer a melhor assistência técnica de Vila Velha. Atendimento de excelente qualidade, as atendentes são super prestativas, o tecnico é um amorzinho, tem a paciência de explicar com uma linguagem mais leiga para o publico mais velho como eu. Indico a todos.</p>
-          <strong>Silvana Mendes</strong>
+          <p>Já é a segunda vez que venho aqui e o atendimento continua impecável. Dessa vez troquei o conector de carga do meu iPhone 12. Rápido, seguro e com garantia. Não levo meu aparelho em outro lugar.</p>
+          <strong>Marcos Almeida</strong>
         </div>
       </div>
     </div>
@@ -374,6 +496,22 @@
     </div>
   </section>
 
+  <!-- ===== MAP ===== -->
+  <section class="map-section">
+    <div class="container map-section__head">
+      <i class="fa-solid fa-location-dot"></i>
+      <span>R. Emídio Ferreira Sacramento, 276 - Aribiri, Vila Velha - ES, 29120-005</span>
+    </div>
+    <iframe
+      class="map-section__iframe"
+      src="https://www.google.com/maps?q=R.+Em%C3%ADdio+Ferreira+Sacramento,+276+-+Aribiri,+Vila+Velha+-+ES,+29120-005&output=embed"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Localização Daniel do iPhone">
+    </iframe>
+  </section>
+
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="container footer__inner">
@@ -384,6 +522,10 @@
         <div class="logo__text">Daniel do <strong>iPhone</strong></div>
       </a>
       <p class="footer__copy">© 2025 Daniel do iPhone · Assistência Técnica Especializada · Vila Velha, ES</p>
+      <p class="footer__address">
+        <i class="fa-solid fa-location-dot"></i>
+        R. Emídio Ferreira Sacramento, 276 - Aribiri, Vila Velha - ES, 29120-005
+      </p>
       <div class="footer__socials">
         <a href="https://facebook.com/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
         <a href="https://instagram.com/danieldoiphone_" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>

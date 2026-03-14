@@ -64,8 +64,6 @@ document.addEventListener('DOMContentLoaded', () => {
       disableOnInteraction: false,
     },
     speed: 800,
-    effect: 'fade',
-    fadeEffect: { crossFade: true },
     pagination: {
       el: '.hero-pagination',
       clickable: true,
@@ -97,16 +95,93 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  addReveal('.trust-item', true);
+  document.querySelectorAll('.trust-item').forEach((el, i) => {
+    if (el.querySelector('.trust-item__icon--gif')) return; // skip GIF item — transform pauses animation
+    el.setAttribute('data-reveal', '');
+    el.setAttribute('data-reveal-delay', String((i % 4) + 1));
+  });
   addReveal('.service-item', false);
   addReveal('.ipad-service', true);
   addReveal('.testimonial-card', true);
   addReveal('.section__head', false);
   addReveal('.about-layout__img', false);
-  addReveal('.ipad-layout__img', false);
+  // .ipad-layout__phone skipped — contains 3D phone, transform would conflict
 
   // Re-init observer for dynamically attributed elements
   document.querySelectorAll('[data-reveal]').forEach(el => revealObserver.observe(el));
+
+  // ---------- 3D TIMER SCROLL ROTATION ----------
+  const timer3d = document.getElementById('timer-3d');
+  const repairSection = document.getElementById('rapido');
+
+  if (timer3d && repairSection) {
+    window.addEventListener('scroll', () => {
+      const rect = repairSection.getBoundingClientRect();
+      const sectionH = repairSection.offsetHeight;
+      const progress = Math.max(0, Math.min(1, (-rect.top + window.innerHeight * 0.5) / (sectionH + window.innerHeight * 0.5)));
+      timer3d.style.transform = `rotateY(${progress * 360}deg)`;
+    }, { passive: true });
+  }
+
+  // ---------- 3D PHONE SCROLL ROTATION ----------
+  const phone3d = document.getElementById('phone-3d');
+  const phoneSection = document.getElementById('servicos');
+
+  if (phone3d && phoneSection) {
+    window.addEventListener('scroll', () => {
+      const rect = phoneSection.getBoundingClientRect();
+      const sectionH = phoneSection.offsetHeight;
+      const progress = Math.max(0, Math.min(1, (-rect.top + window.innerHeight * 0.5) / (sectionH + window.innerHeight * 0.5)));
+      phone3d.style.transform = `rotateY(${progress * 360}deg)`;
+    }, { passive: true });
+  }
+
+  // ---------- MOTO RIDER SCROLL ----------
+  const motoRider = document.getElementById('moto-rider');
+  const motoSection = document.getElementById('ipad');
+
+  if (motoRider && motoSection) {
+    window.addEventListener('scroll', () => {
+      const rect = motoSection.getBoundingClientRect();
+      const sectionH = motoSection.offsetHeight;
+      const progress = Math.max(0, Math.min(1, (-rect.top + window.innerHeight) / (sectionH + window.innerHeight)));
+      const totalDistance = window.innerWidth + 160;
+      motoRider.style.transform = `translateX(${-160 + progress * totalDistance}px)`;
+    }, { passive: true });
+  }
+
+  // ---------- HERO NEON TYPING EFFECT ----------
+  const neonSequence = [
+    { el: document.getElementById('neon-brand'), text: 'Daniel do iPhone', cls: 'hero-neon--brand' },
+    { el: document.getElementById('neon-main'),  text: 'Reparamos seu celular\nem apenas 20 minutos!', cls: 'hero-neon--main' },
+    { el: document.getElementById('neon-sub'),   text: 'Com garantia de 1 ano!', cls: 'hero-neon--sub' },
+  ];
+
+  const typeText = (el, text, speed, onDone) => {
+    let i = 0;
+    el.classList.add('hero-neon--typing');
+    const tick = () => {
+      el.textContent = text.slice(0, i);
+      i++;
+      if (i <= text.length) {
+        setTimeout(tick, speed);
+      } else {
+        el.classList.remove('hero-neon--typing');
+        if (onDone) setTimeout(onDone, 400);
+      }
+    };
+    tick();
+  };
+
+  const runSequence = (index) => {
+    if (index >= neonSequence.length) return;
+    const { el, text, cls } = neonSequence[index];
+    if (!el) return;
+    el.classList.add(cls);
+    typeText(el, text, 20, () => runSequence(index + 1));
+  };
+
+  runSequence(0);
 
   // ---------- IMG PLACEHOLDER FALLBACK ----------
   // If images are missing, add placeholder class to containers
